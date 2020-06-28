@@ -1,0 +1,23 @@
+{% load tapeforms %}<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Simple Bootstrap 5</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="p-5">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">My form</h5>
+				<form action="." method="post" novalidate>
+					{% csrf_token %}
+					{% form form %}
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
